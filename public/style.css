@@ -1,56 +1,106 @@
+/* ====== RESET E BASE ====== */
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8d7da, #fce4ec);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 40px 0;
+}
+
+/* ====== CONTAINERS ====== */
+#register, #listUsers {
+  width: 380px;
+  min-height: 480px;
+  background-color: #f78ca0;
+  background-image: linear-gradient(315deg, #f78ca0 0%, #f9748f 74%);
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 15px;
+  padding: 25px 20px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#register:hover, #listUsers:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ====== TÍTULOS ====== */
+#register h2, #listUsers h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* ====== FORMULÁRIO ====== */
+#form {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-#register {
-  width: 400px;
-  height: 500px;
-  background-color: rgb(250, 135, 160);
-  border-radius: 5px;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin: 10px;
+#form input {
+  width: 85%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
 }
 
-#listUsers {
-  width: 400px;
-  height: 500px;
-  background-color: rgb(250, 135, 160);
-  border-radius: 5px;
-  text-align: center;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin: 10px;
+#form input:focus {
+  border: 2px solid #f6b3c0;
 }
 
-#form {
-  display: flex; /* Define o formulário como um contêiner flexível */
-  flex-direction: column; /* Organiza os itens (inputs e botão) em uma coluna */
-}
-
-#form input,
+/* ====== BOTÃO ====== */
 #form button {
-  margin: 0 10px 10px 10px;
+  width: 90%;
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-form button {
-  color: black;
-  background-color: aliceblue;
-  border-radius: 5px;
-  border: none;
-  height: 30px;
-  box-shadow: 5px 2px 4px 1px #af7886;
+#form button:hover {
+  background-color: #ffe6ec;
+  transform: scale(1.03);
 }
 
-form button:hover {
-  color: black;
-  background-color: rgb(226, 167, 185);
-  transition: 0.5s ease-in;
-  border-radius: 5px;
-  border: none;
+/* ====== LISTA DE USUÁRIOS ====== */
+#listUsers ul {
+  list-style: none;
+  margin-top: 15px;
+  padding: 0;
+}
+
+#listUsers li {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#listUsers li:hover {
+  background-color: rgba(255, 255, 255, 0.35);
 }
