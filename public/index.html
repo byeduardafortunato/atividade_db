@@ -2,22 +2,47 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <title>Lista de Usuários</title>
+    <title>La Belle Rose — Usuários</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="register">
-      <h1>Cadastrar Usuário</h1>
-      <form id="form">
-        <input type="text" id="nome" placeholder="Nome" required />
-        <input type="email" id="email" placeholder="Email" required />
-        <button type="submit">Cadastrar</button>
-      </form>
-    </section>
-    <section id="listUsers">
-      <h2>Usuários cadastrados</h2>
-      <ul id="lista"></ul>
-    </section>
+    <header class="topo">
+      <h1>Bem-vindo(a) ao La Belle Rose 🌸</h1>
+      <p class="sub">Cadastro simples de usuários</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Cadastrar Usuário</h2>
+        <form id="form">
+          <input type="text" id="nome" placeholder="Nome" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <button type="submit" class="btn">Cadastrar</button>
+        </form>
+
+        <div class="info">
+          <p id="totalTexto">Usuários cadastrados: <strong id="total">0</strong></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Login (verificar existência)</h2>
+        <form id="formLogin">
+          <input type="email" id="loginEmail" placeholder="Seu email" required />
+          <button type="submit" class="btn outline">Fazer Login</button>
+        </form>
+
+        <div class="lista-wrap">
+          <h3>Usuários cadastrados</h3>
+          <ul id="lista"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <small>Feito por Duda — projeto de banco de dados</small>
+    </footer>
 
     <script src="script.js"></script>
   </body>
